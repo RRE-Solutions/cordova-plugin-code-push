@@ -73,7 +73,7 @@ var LocalPackage = (function (_super) {
                         //zip.unzip(_this.localPath, unzipDir.toInternalURL(), newPackageUnzipped);
                         window.resolveLocalFileSystemURL(this.localPath, function(localPath) {
                           zip.unzip(localPath.toUrl(), unzipDir.toUrl(), newPackageUnzipped);
-                        } function (error) {
+                        }, function (error) {
                           if (error) {
                             installError && installError(new Error("An error occurred while installing the package." + error));
                           }
