@@ -71,7 +71,7 @@ var LocalPackage = (function (_super) {
                             return;
                         }
                         //zip.unzip(_this.localPath, unzipDir.toInternalURL(), newPackageUnzipped);
-                        window.resolveLocalFileSystemURL(this.localPath, function(localPath) {
+                        window.resolveLocalFileSystemURL(_this.localPath, function(localPath) {
                           zip.unzip(localPath.toUrl(), unzipDir.toUrl(), newPackageUnzipped);
                         }, function (error) {
                           if (error) {
